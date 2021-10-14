@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STUDENT LOGIN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <!--Hamburger-->
+          <i
+            ><img
+              src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+          /></i>
+        </label>
+        <label class="logo">GEN SPEAKS</label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus/aboutus.html">About</a></li>
+          <li><a href="contact/contact.html">Contact</a></li>
+          <li><a class="active" href="login/login.html">Login/Sign Up</a></li>
+        </ul>
+    </nav>
+    <div class="background-pic">
+        <img
+          src="/images/image 4.png"
+          alt="Cinque Terre"
+        />
+    </div>
+    <div class = "hero">
+        <div class = "form-box">
+            <h1>GEN SPEAKS</h1> 
+            <div class = "button-box">
+                <div id="btn"></div>
+                <button type="button" class ="toggle-btn" onclick= "login()">Log In</button>
+                <button type="button" class ="toggle-btn" onclick= "register()">Register</button>
+            </div>
+            <form id= "login" class="input-group">
+                <input type="text" class= "input-field" placeholder= "USERNAME" required>
+                <input type="password" class= "input-field" placeholder= "PASSWORD" required>
+                <a href = "#">Forgot password?</a>
+                <button type="button" class= "submit-btn">LOG IN</button>
+            </form>
+            <form id= "register" class="input-group">
+                <input type="text" class= "input-field" placeholder= "USERNAME"
+                required>
+                <input type="email" class= "input-field" placeholder= "EMAIL"
+                required>
+                <input type="text" class= "input-field" placeholder= "PHONE NUMBER"
+                required>
+                <input type="password" class= "input-field" placeholder= "PASSWORD"
+                required>
+                <input type="password" class= "input-field" placeholder= "CONFIRM PASSWORD"
+                required>
+                <input type="checkbox" class= "check-box" required><span>I agree to the terms and conditions</span>
+                <button type="button" class= "submit-btn">Sign Up</button>
+            </form>
+        </div>
+
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+        </script>
+        </div>
+</body>
+</html>
