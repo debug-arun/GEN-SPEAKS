@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@font-face {
+  font-family: "Bruno Ace";
+  src: url('bruno-ace/Bruno\ Ace\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,500&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -7,35 +13,41 @@
   list-style: none;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Bree serif", "Roboto", sans-serif;
-}
-
-html {
-  height: auto;
-  background-color: #4DADF0B5;
-  border: 2px solid #000000;
-  box-shadow: 0px 2px 2px 0px #00000040;
+  font-family: "Bruno Ace", "Bree Serif", sans-serif;
 }
 
 nav {
   /*background-color: rgba(49, 169, 250, 0.3);*/
   height: 80px;
   width: 100%;
+  line-height: 90px;
   overflow: hidden;
 }
 
 .logo {
-  color: white;
-  font-family: "Bree serif", sans-serif;
-  font-size: 60px;
+  color: #00185a;
+  font-size: 50px;
   font-weight: 900;
-  line-height: 80px;
-  padding: 0 100px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.logo-img{
+  display: inline-block;
+  margin: 0 0 0 30px;
+  background-color: inherit;
+  padding: 0;
+  height: max-content;
+}
+
+.logo-area{
+  display: inline-block;
 }
 
 nav ul {
   float: right;
   margin-right: 20px;
+  overflow: hidden;
 }
 
 nav ul li {
@@ -46,10 +58,11 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
-  font-size: 17px;
+  color: #000;
+  font-size: 20px;
   text-transform: uppercase;
-  padding: 7px 13px;
+  font-weight: 900;
+  padding: 7px 7px;
   border-radius: 15px;
 }
 
@@ -60,15 +73,15 @@ nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #03a9f4;
+  background: #80b6daef;
   z-index: 1;
   mix-blend-mode: screen;
 }
 
 .background-pic {
-  top: 0;
+  top: -170px;
   left: 0;
-  height: 700px;
+  height: auto;
   z-index: -1;
   position: fixed;
   background-position: center center;
@@ -81,6 +94,7 @@ a.active,
 a:hover {
   background: #000000;
   transition: 0.5s;
+  color: #fff;
 }
 
 .checkbtn {
@@ -101,7 +115,7 @@ a:hover {
   display: block;
   padding: 20px;
   padding-left: 10%;
-  width: 550px;
+  width: 650px;
   height: auto;
   float: right;
   box-sizing: border-box;
@@ -110,23 +124,24 @@ a:hover {
 .welcome h1{
   padding: 0 10px 2px 10px;
   text-align: left;
-  font-family: 'Bree serif', san-serif;
+  padding-bottom: 10px;
   font-weight: 900;
   font-size: 45px;
 }
 
 .welcome a{
   color: #fff;
-  font-family: "Bree serif", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(1, 0, 83);
+  font-style: italic;
   text-align: center;
   display: block;
-  padding: 10px;
-  border: 1px solid;
-  border-radius: 8px;
-  width: 200px;
-  margin-left: 20%;
-  font-weight: 800;
+  padding: 12px;
+  border-radius: 30px;
+  width: 180px;
+  margin-top: 40px;
+  margin-left: 18%;
+  font-weight: 600;
   font-size: 30px;
 }
 
@@ -138,15 +153,14 @@ a:hover {
 .welcome p{
   padding: 0 30px 10px 10px;
   font-size: xx-small;
-  font-weight: bold;
+  font-weight: bolder;
+  margin-top: 30px;
 }
 
 .footer {
   padding: 40px 0;
   padding-bottom: 0;
   margin-bottom: 0;
-  background-color: #fff;
-  background-color: #96969696;
   width: 100%;
   position: sticky;
 }
@@ -159,7 +173,7 @@ a:hover {
 
 .footer .social a {
   font-size: 24px;
-  color: inherit;
+  color: #000;
   border: 1px solid;
   width: 40px;
   line-height: 38px;
@@ -174,7 +188,7 @@ a:hover {
 .footer .social a:hover {
   opacity: 0.9;
   color: #020202;
-  background-color: #707070;
+  background-color: #4476ff;
 }
 
 .footer ul {
@@ -202,9 +216,9 @@ a:hover {
 .footer ul li a:hover {
   opacity: 1;
   height: auto;
-  background-color: inherit;
+  background-color: #000;
   border-radius: 5px;
-  color: #238cf599;
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -303,7 +317,4 @@ a:hover {
     height: auto;
     border: 0;
   }
-
-  
-
 }

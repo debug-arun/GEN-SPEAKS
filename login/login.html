@@ -2,9 +2,8 @@
 <html>
 <head>
     <title>STUDENT LOGIN</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="login_style.css">
+    <link rel = "icon" href = "../images/titlebar_logo.png">
 </head>
 
 <body>
@@ -17,33 +16,46 @@
               src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
           /></i>
         </label>
-        <label class="logo">GEN SPEAKS</label>
+        <div class = "logo-area">
+            <img class = "logo-img" src="../images/logo2.png"
+              width = "100px"
+              height = "auto"
+            >
+            <label class="logo">GEN SPEAKS</label>
+        </div>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a class="active" href="../login/login.html">Login/Sign Up</a></li>
+          <li><a href="aboutus/aboutus.html">About</a></li>
+          <li><a href="contact/contact.html">Contact</a></li>
+          <li><a class="active" href="login/login.html">Login/Sign Up</a></li>
         </ul>
     </nav>
     <div class="background-pic">
         <img
-          src="../images/image 4.png"
+          src="../images/Capture1.PNG"
           alt=""
+          width= "1500px"
+          height = "auto"
         />
     </div>
     <div class = "hero">
-        <div class = "form-box">
-            <h1>GEN SPEAKS</h1> 
+        <div class = "form-box" id = "form">
+            <!--h1>GEN SPEAKS</!--h1--> 
             <div class = "button-box">
                 <div id="btn"></div>
-                <button type="button" class ="toggle-btn" onclick= "login()">Log In</button>
-                <button type="button" class ="toggle-btn" onclick= "register()">Register</button>
+                <button type="button" class ="toggle-btn" id = "log" onclick= "login()">Log In</button>
+                <button type="button" class ="toggle-btn" id = "sign" onclick= "register()">Register</button>
             </div>
             <form id= "login" class="input-group">
                 <input type="text" class= "input-field" placeholder= "USERNAME" required>
                 <input type="password" class= "input-field" placeholder= "PASSWORD" required>
-                <a href = "#">Forgot password?</a>
+                <div class = "forgot"><a href = "#">Forgot password?</a></div>
                 <button type="button" class= "submit-btn">LOG IN</button>
+                <span class = "or"> or </span>
+                <div class="social">
+                    <a href="#"><img src="../images/logo-google.png" width = "40px"></a>
+                    <a href="#"><img src = "../images/logo-facebook.png" width = "40px"></a>
+                </div>
             </form>
             <form id= "register" class="input-group">
                 <input type="text" class= "input-field" placeholder= "USERNAME"
@@ -58,23 +70,34 @@
                 required>
                 <input type="checkbox" class= "check-box" required><span>I agree to the terms and conditions</span>
                 <button type="button" class= "submit-btn">Sign Up</button>
+                <span class = "or"> or </span>
+                <div class="social">
+                    <a href="#"><img src="../images/logo-google.png" width = "40px"></a>
+                    <a href="#"><img src = "../images/logo-facebook.png" width = "40px"></a>
+                </div>
             </form>
+
         </div>
 
         <script>
             var x = document.getElementById("login");
             var y = document.getElementById("register");
             var z = document.getElementById("btn");
+            var t = document.getElementById("form");
 
             function register(){
                 x.style.left = "-400px";
                 y.style.left = "50px";
-                z.style.left = "110px";
+                z.style.left = "120px";
+                t.style.height = "600px";
+                z.style.transition = "0.5s";
             }
             function login(){
                 x.style.left = "50px";
                 y.style.left = "450px";
                 z.style.left = "0px";
+                t.style.height = "550px";
+                t.style.transition = ".2s";
             }
         </script>
         </div>
