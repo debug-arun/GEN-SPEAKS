@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Bruno Ace";
+  src: url('../bruno-ace/Bruno\ Ace\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Bruno Ace", "Bree serif", sans-serif;
+}
+  
+nav {
+    /*background-color: rgba(49, 169, 250, 0.3);*/
+    height: 100px;
+    width: 100%;
+    line-height: 90px;
+    overflow: hidden;
+}
+  
+.background-pic:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #80b6daef;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+  
+.background-pic {
+    top: -170px;
+    left: 0;
+    max-width: 1700px;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    position: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #4DADF0B5;
+}
+
+.logo {
+  color: #00185a;
+  font-size: 40px;
+  font-weight: 900;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.logo-img{
+  display: inline-block;
+  margin: 0 0 0 30px;
+  background-color: inherit;
+  padding: 0;
+  height: max-content;
+}
+
+.logo-area{
+  display: inline-block;
+}
+  
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+  
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    overflow: hidden;
+}
+  
+nav ul li a {
+    color: #000;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 7px 10px;
+    border-radius: 15px;
+}
+
+a.active,
+a:hover {
+  background: #000000;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+  
+#check {
+    display: none;
+}
+
+.hero{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    overflow: visible;
+    padding-bottom: 0;
+}
+
+.form-box h1{
+    float: right;
+    padding: 40px;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-box{
+    width: 420px;
+    height: 550px;
+    position: relative;
+    margin: 2% auto;
+    background-color: #fff;
+    opacity: 0.7;
+    overflow-y: hidden;
+    border-radius: 30px;
+}
+
+.button-box{
+    width: 230px;
+    height: 35px auto;
+    position: relative;
+    top: -5px;
+    left: 55px;
+    margin: 45px;
+    box-shadow: 0 9px 20px 9px #03a3ff4f;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+  font-style: italic;
+  font-weight: bold;
+    padding: 10px 20px;
+    left: 12px;
+    cursor: pointer;
+    background: transparent;
+    border: 3px;
+    outline: none;
+    position: relative;
+}
+
+#log{
+  width: 49%;
+  left: 2px;
+}
+
+#sign{
+  width: 48%;
+  left: -3px;
+}
+
+.forgot{
+  margin: 20px 5px 70px 5px;
+}
+
+.forgot a{
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.forgot a:hover{
+  background-color: inherit;
+  color: #00185a
+}
+
+#login{
+  display: block;
+  left: 50px;
+  top: 25%;
+  height: auto;
+  justify-content: center;
+}
+
+#register{
+  left: 450px;
+  display: block;
+  top: 15%;
+  height: auto;
+  border: 30px;
+}
+
+#btn{
+    top: 0px;
+    position: absolute;
+    opacity: 0.8;
+    width: 112px;
+    height: 100%;
+    background: linear-gradient(to right, #cf10ff, #2085f8);
+    border-radius: 30px;
+    transition: 0.5s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-group{
+    left: 30px;
+    position: absolute;
+    width: 280px;
+    margin: 20px;
+    padding: 5px;
+    padding-top: 0;
+    border-radius: 10px;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #999;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    font-weight: 700;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 20px;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(to right, rgba(207, 16, 255, 0.8), #2085f8aa);
+    border-radius: 30px;
+    font-weight: bold;
+    border: #777;
+}
+
+input.check-box{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+span{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    left: 30px;
+    margin: 10px;
+    bottom: auto;
+    position: absolute;
+}
+
+.form-box p{
+    text-align: center;
+    display: block;
+    margin: 40px 3px 0px 3px;
+    padding-bottom: 0px;
+    font-size: 35px;
+    color: rgb(220, 80, 46)
+} 
+
+.social{
+  display: block;
+  padding: 20px;
+  margin: 3% auto;
+  margin-top: 10%;
+  border-top: 1px solid #000000;
+}
+
+.social img{
+  margin: 10px;
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.or{
+  display: block;
+  text-align: center;
+  padding-left: 31%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0082e6;
+}
+  
+
+@media (max-width: 952px) {
+  label.logo {
+    display: inline-block;
+    font-size: 35px;
+    padding-left: 30px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  
+  .checkbtn {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .logo-area{
+    line-height: 60px;
+    display: inline-block;
+  }
+  .logo-img{
+    display: inline-block;
+  }
+  .logo{
+    display: inline-block;
+    font-size: 50px;
+  }
+  nav{
+    display: inline-block;
+    height: auto;
+    padding-bottom: 2px;
+    font-size: 10px;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 10000;
+  }
+  nav ul li {
+    display: block;
+    margin: 36px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: #fff;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .hero{
+    margin: auto;
+    background-position: center;
+  }
+  .form-box{
+    width: 420px;
+    height: 100%;
+  }
+
+}
