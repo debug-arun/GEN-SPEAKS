@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8"/>
+    <title>Student Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="../css/index-style.css">
+    <link rel="stylesheet" href="../css/login-style.css">
+    <link rel = "icon" href = "../images/titlebar_logo.png">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <!--Hamburger-->
+          <i
+            ><img
+              src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+          /></i>
+        </label>
+        <div class = "logo-area">
+            <a href = "index.html">
+              <img class = "logo-img" src="../images/logo2.png"
+                width = "100px"
+                height = "auto"
+              >
+              <style>
+                .logo-area a:hover{
+                  background-color: inherit;
+                }
+              </style>
+            </a>
+            <label class="logo">
+              <div class="gen">GEN</div>
+              <div class="gen">SPEAKS</div>
+            </label>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="team-index.html">Team</a></li>
+          <li><a class="active" href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!-- <div class="background-pic">
+        <img
+          src="../images/Capture1.PNG"
+          alt=""
+          width= "1500px"
+          height = "auto"
+        />
+    </div> -->
+    <div class = "hero">
+        <div class = "form-box" id = "form">
+            <!--h1>GEN SPEAKS</!--h1--> 
+            <div class = "button-box">
+                <div id="btn"></div>
+                <button type="button" class ="toggle-btn" id = "log" onclick= "login()">Log In</button>
+                <button type="button" class ="toggle-btn" id = "sign" onclick= "register()">Register</button>
+            </div>
+            <form id= "login" class="input-group">
+                <input type="text" class= "input-field" placeholder= "USERNAME" required>
+                <input type="password" class= "input-field" placeholder= "PASSWORD" required>
+                <div class = "forgot"><a href = "#">Forgot password?</a></div>
+                <button type="button" class= "submit-btn">LOG IN</button>
+                <span class = "or"> or </span>
+                <div class="social">
+                    <a href="#"><img src="../images/logo-google.png" width = "40px"></a>
+                    <a href="#"><img src = "../images/logo-facebook.png" width = "40px"></a>
+                </div>
+            </form>
+            <form id= "register" class="input-group">
+                <input type="text" class= "input-field" placeholder= "USERNAME"
+                required>
+                <input type="email" class= "input-field" placeholder= "EMAIL"
+                required>
+                <input type="text" class= "input-field" placeholder= "PHONE NUMBER"
+                required>
+                <input type="password" class= "input-field" placeholder= "PASSWORD"
+                required>
+                <input type="password" class= "input-field" placeholder= "CONFIRM PASSWORD"
+                required>
+                <input type="checkbox" class= "check-box" required><span>I agree to the terms and conditions</span>
+                <button type="button" class= "submit-btn">Sign Up</button>
+                <span class = "or"> or </span>
+                <div class="social">
+                    <a href="#"><img src="../images/logo-google.png" width = "40px"></a>
+                    <a href="#"><img src = "../images/logo-facebook.png" width = "40px"></a>
+                </div>
+            </form>
+
+        </div>
+
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            var t = document.getElementById("form");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "120px";
+                t.style.height = "600px";
+                z.style.transition = "0.5s";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+                t.style.height = "550px";
+                t.style.transition = ".2s";
+            }
+        </script>
+        </div>
+</body>
+</html>
